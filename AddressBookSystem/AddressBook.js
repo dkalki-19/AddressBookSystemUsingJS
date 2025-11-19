@@ -93,3 +93,13 @@ function addContactUnique(contact) {
     }
     addressBook.push(contact);
 }
+
+// UC8 – Search by City/State
+
+function searchByCity(city) {
+    return addressBook.filter(c => c.city === city);
+}
+
+function searchByState(state) {
+    return addressBook.filter(c => c.state === state);
+}
