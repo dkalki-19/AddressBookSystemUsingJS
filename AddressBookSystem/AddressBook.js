@@ -127,3 +127,9 @@ function countByCity(city) {
 function countByState(state) {
     return addressBook.filter(c => c.state === state).length;
 }
+
+// UC11 – Sort by Person Name
+
+function sortByName() {
+    addressBook.sort((a, b) => a.firstName.localeCompare(b.firstName));
+}
