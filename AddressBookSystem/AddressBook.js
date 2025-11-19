@@ -133,3 +133,16 @@ function countByState(state) {
 function sortByName() {
     addressBook.sort((a, b) => a.firstName.localeCompare(b.firstName));
 }
+// UC12 – Sort by City, State, ZIP
+
+function sortByCity() {
+    addressBook.sort((a, b) => a.city.localeCompare(b.city));
+}
+
+function sortByState() {
+    addressBook.sort((a, b) => a.state.localeCompare(b.state));
+}
+
+function sortByZip() {
+    addressBook.sort((a, b) => a.zip.localeCompare(b.zip));
+}
