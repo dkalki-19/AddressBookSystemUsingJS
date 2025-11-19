@@ -117,3 +117,13 @@ function viewByState(state) {
         .filter(c => c.state === state)
         .map(c => c.toString());
 }
+
+// UC10 – Count by City/State
+
+function countByCity(city) {
+    return addressBook.filter(c => c.city === city).length;
+}
+
+function countByState(state) {
+    return addressBook.filter(c => c.state === state).length;
+}
