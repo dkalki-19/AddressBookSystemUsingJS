@@ -72,3 +72,9 @@ function deleteContact(name) {
         console.log("Contact Not Found!");
     }
 }
+
+// UC6 – Count Contacts
+
+function countContacts() {
+    return addressBook.reduce(count => count + 1, 0);
+}
