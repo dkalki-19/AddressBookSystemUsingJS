@@ -34,3 +34,10 @@ class Contact {
         Phone: ${this.phone}, Email: ${this.email}`;
     }
 }
+// UC3 – Create Address Book & Add Contacts
+
+let addressBook = [];
+
+function addContact(contact) {
+    addressBook.push(contact);
+}
