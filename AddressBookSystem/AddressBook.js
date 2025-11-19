@@ -78,3 +78,18 @@ function deleteContact(name) {
 function countContacts() {
     return addressBook.reduce(count => count + 1, 0);
 }
+
+// UC7 – Avoid Duplicate Entry
+
+function addContactUnique(contact) {
+    let exists = addressBook.filter(c =>
+        c.firstName === contact.firstName &&
+        c.lastName === contact.lastName
+    );
+
+    if (exists.length > 0) {
+        console.log("Duplicate Contact Not Allowed!");
+        return;
+    }
+    addressBook.push(contact);
+}
