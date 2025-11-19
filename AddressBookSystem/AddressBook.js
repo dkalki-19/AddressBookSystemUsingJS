@@ -60,3 +60,15 @@ function editContact(name, newData) {
         person[key] = newData[key];
     }
 }
+
+// UC5 – Delete Contact
+
+function deleteContact(name) {
+    let index = addressBook.findIndex(c => c.firstName === name);
+    if (index !== -1) {
+        addressBook.splice(index, 1);
+        console.log("Deleted Successfully");
+    } else {
+        console.log("Contact Not Found!");
+    }
+}
