@@ -33,6 +33,9 @@ class Contact {
         ${this.address}, ${this.city}, ${this.state} - ${this.zip},
         Phone: ${this.phone}, Email: ${this.email}`;
     }
+
+    
+    
 }
 // UC3 – Create Address Book & Add Contacts
 
@@ -40,4 +43,20 @@ let addressBook = [];
 
 function addContact(contact) {
     addressBook.push(contact);
+}
+
+// UC4 – Edit Contact
+
+function editContact(name, newData) {
+    let person = addressBook.find(c => c.firstName === name);
+
+    if (!person) {
+        console.log("Contact Not Found!");
+        return;
+    }
+
+    // Update only given fields
+    for (let key in newData) {
+        person[key] = newData[key];
+    }
 }
