@@ -103,3 +103,17 @@ function searchByCity(city) {
 function searchByState(state) {
     return addressBook.filter(c => c.state === state);
 }
+
+// UC9 – View Person by City/State
+
+function viewByCity(city) {
+    return addressBook
+        .filter(c => c.city === city)
+        .map(c => c.toString());
+}
+
+function viewByState(state) {
+    return addressBook
+        .filter(c => c.state === state)
+        .map(c => c.toString());
+}
